@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-setup(name='target-stitch',
+setup(name='singer-target-stitch',
       version='2.0.6',
       description='Singer.io target for the Stitch API',
       author='Stitch',
@@ -30,7 +30,7 @@ setup(name='target-stitch',
       },
       entry_points='''
           [console_scripts]
-          target-stitch=target_stitch:main
+          singer-target-stitch=target_stitch:main
       ''',
       packages=['target_stitch'],
 )
