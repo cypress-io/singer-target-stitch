@@ -17,6 +17,7 @@ import sys
 import time
 import urllib
 import functools
+import os
 
 from threading import Thread
 from contextlib import contextmanager
