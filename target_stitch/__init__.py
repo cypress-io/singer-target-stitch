@@ -18,10 +18,6 @@ import time
 import urllib
 import functools
 import os
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-sys.path.insert(0, parent_dir)
 
 from threading import Thread
 from contextlib import contextmanager
@@ -650,8 +646,7 @@ def main_impl():
     else:
         config = json.load(args.config)
         # token = config.get('token')
-        token = os.environ['STS_TOKEN']
-        echo token
+        token = os.environ['STITCH_TOKEN']
         stitch_url = use_batch_url(config.get('stitch_url', DEFAULT_STITCH_URL))
         turbo_boost_factor = get_turbo_boost_factor(config)
         if not token:
