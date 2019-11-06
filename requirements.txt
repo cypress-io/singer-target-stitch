@@ -1,1 +1,5 @@
 singer-python==5.8.0
+backoff==1.8.0
+requests==2.20.0
+regex==2018.7.11
+#singer-tap-chargebee --config config.json --catalog catalog.json | singer-target-stitch --catalog.json
