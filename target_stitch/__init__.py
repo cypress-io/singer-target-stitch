@@ -646,11 +646,11 @@ def main_impl():
     else:
         config = json.load(args.config)
         # token = config.get('token')
-        token = os.environ['STS_TOKEN']
+        token = os.environ.get('STS_TOKEN')
         stitch_url = use_batch_url(config.get('stitch_url', DEFAULT_STITCH_URL))
         turbo_boost_factor = get_turbo_boost_factor(config)
         if not token:
-            raise Exception('Configuration is missing required "token" field: {}'.format(token))
+            raise Exception('Configuration is missing required "token" field')
 
         if not config.get('disable_collection'):
             LOGGER.info('Sending version information to stitchdata.com. ' +
