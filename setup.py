@@ -12,6 +12,7 @@ setup(name='singer-target-stitch',
       install_requires=[
           'jsonschema==2.6.0',
           'mock==2.0.0',
+        #   removed because of pip dependency issues
         #   'requests==2.20.0',
         #   'singer-python==5.8.0',
           'psutil==5.3.1',
