@@ -646,6 +646,7 @@ def main_impl():
     else:
         config = json.load(args.config)
         # token = config.get('token')
+        print(os.environ)
         token = os.environ.get('STITCH_TOKEN')
         stitch_url = use_batch_url(config.get('stitch_url', DEFAULT_STITCH_URL))
         turbo_boost_factor = get_turbo_boost_factor(config)
